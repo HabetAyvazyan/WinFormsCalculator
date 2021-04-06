@@ -36,19 +36,19 @@ namespace WinFormsCalculator
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.minus = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.mult = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.plusMinus = new System.Windows.Forms.Button();
             this.percent = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.div = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -95,7 +95,6 @@ namespace WinFormsCalculator
             this.button3.TabIndex = 0;
             this.button3.Text = ".";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -157,20 +156,20 @@ namespace WinFormsCalculator
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.number_Click);
             // 
-            // button8
+            // add
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(330, 411);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 80);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "+";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.operator_Click);
+            this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.add.FlatAppearance.BorderSize = 0;
+            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.add.ForeColor = System.Drawing.Color.White;
+            this.add.Location = new System.Drawing.Point(330, 411);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(100, 80);
+            this.add.TabIndex = 0;
+            this.add.Text = "+";
+            this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.operator_Click);
             // 
             // button9
             // 
@@ -217,20 +216,20 @@ namespace WinFormsCalculator
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.number_Click);
             // 
-            // button12
+            // minus
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(330, 325);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(100, 80);
-            this.button12.TabIndex = 0;
-            this.button12.Text = "-";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.operator_Click);
+            this.minus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.minus.FlatAppearance.BorderSize = 0;
+            this.minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minus.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.minus.ForeColor = System.Drawing.Color.White;
+            this.minus.Location = new System.Drawing.Point(330, 325);
+            this.minus.Name = "minus";
+            this.minus.Size = new System.Drawing.Size(100, 80);
+            this.minus.TabIndex = 0;
+            this.minus.Text = "-";
+            this.minus.UseVisualStyleBackColor = false;
+            this.minus.Click += new System.EventHandler(this.operator_Click);
             // 
             // button13
             // 
@@ -277,20 +276,21 @@ namespace WinFormsCalculator
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.number_Click);
             // 
-            // button16
+            // mult
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(330, 239);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(100, 80);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "×";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.operator_Click);
+            this.mult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.mult.FlatAppearance.BorderSize = 0;
+            this.mult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mult.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mult.ForeColor = System.Drawing.Color.White;
+            this.mult.Location = new System.Drawing.Point(330, 239);
+            this.mult.Name = "mult";
+            this.mult.Size = new System.Drawing.Size(100, 80);
+            this.mult.TabIndex = 0;
+            this.mult.Text = "×";
+            this.mult.UseVisualStyleBackColor = false;
+            this.mult.Click += new System.EventHandler(this.operator_Click);
+
             // 
             // clear
             // 
@@ -337,20 +337,20 @@ namespace WinFormsCalculator
             this.percent.UseVisualStyleBackColor = false;
             this.percent.Click += new System.EventHandler(this.percent_Click);
             // 
-            // button21
+            // div
             // 
-            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Location = new System.Drawing.Point(330, 153);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(100, 80);
-            this.button21.TabIndex = 0;
-            this.button21.Text = "÷";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.operator_Click);
+            this.div.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.div.FlatAppearance.BorderSize = 0;
+            this.div.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.div.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.div.ForeColor = System.Drawing.Color.White;
+            this.div.Location = new System.Drawing.Point(330, 153);
+            this.div.Name = "div";
+            this.div.Size = new System.Drawing.Size(100, 80);
+            this.div.TabIndex = 0;
+            this.div.Text = "÷";
+            this.div.UseVisualStyleBackColor = false;
+            this.div.Click += new System.EventHandler(this.operator_Click);
             // 
             // textBox1
             // 
@@ -372,10 +372,10 @@ namespace WinFormsCalculator
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(442, 590);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.div);
+            this.Controls.Add(this.mult);
+            this.Controls.Add(this.minus);
+            this.Controls.Add(this.add);
             this.Controls.Add(this.percent);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button11);
@@ -407,19 +407,19 @@ namespace WinFormsCalculator
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button minus;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button mult;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button plusMinus;
         private System.Windows.Forms.Button percent;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button div;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
