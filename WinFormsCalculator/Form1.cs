@@ -37,6 +37,7 @@ namespace WinFormsCalculator
         }
         private void operator_Click(object sender, EventArgs e)
         {
+            string b = textBox1.Text;
             Button btn = sender as Button;
             action = btn.Text;
             var s = textBox1.Text.Split('+', '−', '÷', '×');
@@ -50,7 +51,7 @@ namespace WinFormsCalculator
                 }
                 catch (Exception exception)
                 {
-                     
+                    textBox1.Text = b;
                 }
                 if (textBox1.Text.Contains("÷"))
                 {
@@ -77,6 +78,7 @@ namespace WinFormsCalculator
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            string k = textBox1.Text;
             if (textBox1.Text == null)
             {
                 textBox1.Text = number1.ToString();
@@ -84,8 +86,15 @@ namespace WinFormsCalculator
             else
             {
                 var sp = textBox1.Text.Split('+', '−', '÷', '×');
-                number1 = double.Parse(sp[0]);
-                number2 = double.Parse(sp[1]);
+                try
+                {
+                    number1 = double.Parse(sp[0]);
+                    number2 = double.Parse(sp[1]);
+                }
+                catch (Exception exception)
+                {
+                    textBox1.Text = k;
+                }
                 if (action == "+")
                 {
                     textBox1.Text = (number1 + number2).ToString();
