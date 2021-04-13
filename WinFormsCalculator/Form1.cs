@@ -13,45 +13,18 @@ namespace WinFormsCalculator
 {
     public partial class Form1 : Form
     {
-        List<string> numStrList;
-        string numStr;
         double number1;
         double number2;
         string action;
         List<char> actionChars = new List<char>() {'+', '−', '÷', '×'};
-        bool operation;
-
         public Form1()
         {
-            //if (operation == true && textBox1.Text != null)
-            //{
-            //    number2 = Convert.ToDouble(textBox1.Text);
-            //}
-            //if (action == "+")
-            //{
-            //    textBox1.Text = (number1 + number2).ToString();
-            //}
-            //else if (action == "-")
-            //{
-            //    textBox1.Text = (number1 - number2).ToString();
-            //}
-            //else if (action == "×")
-            //{
-            //    textBox1.Text = (number1 * number2).ToString();
-            //}
-            //else if (action == "÷")
-            //{
-            //    textBox1.Text = (number1 / number2).ToString();
-            //}
             InitializeComponent();
         }
-
-
         private void clear_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
         }
-
         private void number_Click(object sender, EventArgs e)
         {
 
@@ -61,22 +34,9 @@ namespace WinFormsCalculator
             }
 
             textBox1.Text += ((Button) sender).Text;
-            //if (textBox1.Text != "" && operation == true)
-            //{
-            //    number2 = Convert.ToDouble(textBox1.Text);
-            //}
-            //if (//actionChars.Count(c => textBox1.Text.Contains(c)) == 2)
-            //    textBox1.Text.IndexOfAny(new char[] { '+', '-', '÷', '×' }) != -1)
-            //{
-            //    number2 = Convert.ToDouble(textBox1.Text.Split(action)[1]);
-            //    //if(textBox1.Text.IndexOfAny(new char[] { '+', '-', '÷', '×' }) != -1)
-
-            //}
         }
-
         private void operator_Click(object sender, EventArgs e)
         {
-            operation = true;
             Button btn = sender as Button;
             action = btn.Text;
             var s = textBox1.Text.Split('+', '−', '÷', '×');
@@ -114,11 +74,7 @@ namespace WinFormsCalculator
             {
                 textBox1.Text += action;
             }
-            //number1 = Convert.ToDouble(textBox1.Text);
-            //textBox1.Text += btn.Text;
-
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == null)
@@ -146,16 +102,13 @@ namespace WinFormsCalculator
                 {
                     textBox1.Text = (number1 / number2).ToString();
                 }
-
             }
         }
-
         private void percent_Click(object sender, EventArgs e)
         {
             double number = Double.Parse(textBox1.Text);
             textBox1.Text = (number * number).ToString();
         }
-
         private void plusMinus_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
@@ -170,7 +123,6 @@ namespace WinFormsCalculator
                 }
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.IndexOf('.') == -1)
