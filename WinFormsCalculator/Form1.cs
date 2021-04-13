@@ -18,8 +18,9 @@ namespace WinFormsCalculator
         double number1;
         double number2;
         string action;
-        List<char> actionChars = new List<char>(){'+','-', '÷', '×'};
+        List<char> actionChars = new List<char>() {'+', '−', '÷', '×'};
         bool operation;
+
         public Form1()
         {
             //if (operation == true && textBox1.Text != null)
@@ -44,7 +45,7 @@ namespace WinFormsCalculator
             //}
             InitializeComponent();
         }
-        
+
 
         private void clear_Click(object sender, EventArgs e)
         {
@@ -58,44 +59,64 @@ namespace WinFormsCalculator
             {
                 textBox1.Clear();
             }
-            textBox1.Text += ((Button)sender).Text;
-            if (textBox1.Text != "" && operation == true)
-            {
 
-                number2 = Convert.ToDouble(textBox1.Text);
-            }
+            textBox1.Text += ((Button) sender).Text;
+            //if (textBox1.Text != "" && operation == true)
+            //{
+            //    number2 = Convert.ToDouble(textBox1.Text);
+            //}
             //if (//actionChars.Count(c => textBox1.Text.Contains(c)) == 2)
             //    textBox1.Text.IndexOfAny(new char[] { '+', '-', '÷', '×' }) != -1)
             //{
             //    number2 = Convert.ToDouble(textBox1.Text.Split(action)[1]);
             //    //if(textBox1.Text.IndexOfAny(new char[] { '+', '-', '÷', '×' }) != -1)
-                
+
             //}
         }
-        
+
         private void operator_Click(object sender, EventArgs e)
         {
             operation = true;
             Button btn = sender as Button;
             action = btn.Text;
-            number1 = Convert.ToDouble(textBox1.Text);
+            var s = textBox1.Text.Split('+', '−', '÷', '×');
+            if (actionChars.Any(a=> textBox1.Text.Contains(a)) && s.Length == 2)
+            {
+                var spl = textBox1.Text.Split('+', '−', '÷', '×');
+                try
+                {
+                    number1 = Double.Parse(spl[0]);
+                    number2 = Double.Parse(spl[1]);
+                }
+                catch (Exception exception)
+                {
+                     
+                }
+                if (textBox1.Text.Contains("÷"))
+                {
+                    textBox1.Text = (number1 / number2).ToString();
+                }
+                else if (textBox1.Text.Contains("+"))
+                {
+                    textBox1.Text = (number1 + number2).ToString();
+                }
+                else if (textBox1.Text.Contains("−"))
+                {
+                    textBox1.Text = (number1 - number2).ToString();
+                }
+                else if (textBox1.Text.Contains("×"))
+                {
+                    textBox1.Text = (number1 * number2).ToString();
+                }
+                textBox1.Text += action;
+            }
+            else if (!actionChars.Any(a => textBox1.Text.Contains(a)))
+            {
+                textBox1.Text += action;
+            }
+            //number1 = Convert.ToDouble(textBox1.Text);
             //textBox1.Text += btn.Text;
-            if (action == "÷")
-            {
-                textBox1.Text = (number1 / number2).ToString();
-            }
-            else if (action == "+")
-            {
-                textBox1.Text = (number1 + number2).ToString();
-            }
-            else if (action == "-")
-            {
-                textBox1.Text = (number1 - number2).ToString();
-            }
-            else if (action == "×")
-            {
-                textBox1.Text = (number1 * number2).ToString();
-            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -106,12 +127,14 @@ namespace WinFormsCalculator
             }
             else
             {
-                number2 = double.Parse(textBox1.Text);
+                var sp = textBox1.Text.Split('+', '−', '÷', '×');
+                number1 = double.Parse(sp[0]);
+                number2 = double.Parse(sp[1]);
                 if (action == "+")
                 {
                     textBox1.Text = (number1 + number2).ToString();
                 }
-                else if (action == "-")
+                else if (action == "−")
                 {
                     textBox1.Text = (number1 - number2).ToString();
                 }
@@ -139,7 +162,7 @@ namespace WinFormsCalculator
             {
                 if (textBox1.Text[0] == '-')
                 {
-                    textBox1.Text = textBox1.Text.Remove(0,1);
+                    textBox1.Text = textBox1.Text.Remove(0, 1);
                 }
                 else
                 {

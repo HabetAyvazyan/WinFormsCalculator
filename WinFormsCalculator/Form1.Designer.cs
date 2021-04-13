@@ -227,7 +227,7 @@ namespace WinFormsCalculator
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(100, 80);
             this.minus.TabIndex = 0;
-            this.minus.Text = "-";
+            this.minus.Text = "−";
             this.minus.UseVisualStyleBackColor = false;
             this.minus.Click += new System.EventHandler(this.operator_Click);
             // 
@@ -290,7 +290,6 @@ namespace WinFormsCalculator
             this.mult.Text = "×";
             this.mult.UseVisualStyleBackColor = false;
             this.mult.Click += new System.EventHandler(this.operator_Click);
-
             // 
             // clear
             // 
